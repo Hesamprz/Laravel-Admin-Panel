@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Models\Product;
 use App\Http\Controllers\ProductController;
+<<<<<<< HEAD
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\OrderItemController;
@@ -51,3 +52,7 @@ Route::get('/order-items/{order_item}', [OrderItemController::class, 'show'])->n
 Route::get('/order-items/{order_item}/edit', [OrderItemController::class, 'edit'])->name('order-items.edit');
 Route::put('/order-items/{order_item}', [OrderItemController::class, 'update'])->name('order-items.update');
 Route::delete('/order-items/{order_item}', [OrderItemController::class, 'destroy'])->name('order-items.destroy');
+=======
+
+Route::resource('products', ProductController::class);
+>>>>>>> 78e72bb29cdbc01d296492136d2e3612c6e96224
